@@ -2,9 +2,159 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background: rgb(230, 230, 230);
+  letter-spacing: 0.7px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.top {
+  margin: 5% 0;
+}
+
+.top_wrapper {
+  display: inline;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 5% 0;
+}
+
+.top_wrapper:nth-child(1) {
+  color: orange;
+}
+
+.thumbnail {
+  text-align: center;
+}
+
+.thumbnail:hover {
+  transform: scale(1.05);
+  transition: 0.2s;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2),0 7px 20px 0 rgba(0, 0, 0, 0.17);
 }
 
 .img-thumbnail {
   border: none;
   max-height: 150px;
 }
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.4);
+  animation-name: modal_open;
+  animation-duration: 1s;
+}
+
+@keyframes modal_open {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal {
+  overflow: auto;
+  display: block;
+  background: #fff;
+  margin-top: 5%;
+  width: 50%;
+  bottom: auto;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2),0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  padding: 40px 20px;
+}
+
+.img-thumbnail-details {
+  display: block;
+  position: relative;
+  max-height: 100%;
+  max-width: 100%;
+  margin: auto;
+}
+
+.name {
+  font-weight: 600;
+}
+
+.tagline {
+  color: rgba(185, 185, 185, 0.959);
+  font-weight: 300;
+}
+
+.line {
+  width: 50px;
+  border-top: 4px solid orange;
+}
+
+.percentage-container {
+  margin: 30px 0; 
+}
+
+.food {
+  margin-top: 30px;
+}
+
+.percentage {
+  display: inline;
+  width: auto;
+  margin-right: 20px;
+}
+
+.percentage:nth-child(2) {
+  float: left;
+}
+
+.text {
+  color: rgb(165, 165, 165);
+  line-height: 1.7;
+  margin: 0; 
+}
+
+.spinner{
+  width: 80px;
+  height: 80px;
+  
+  border: 2px solid #f3f3f3;
+  border-top:3px solid orange;
+  border-radius: 100%;
+  
+  position: relative;
+  top:0;
+  bottom:0;
+  left:0;
+  right: 0;
+  margin: 5% auto;
+  
+  animation: spin 1s infinite linear;
+}
+
+.caption h4 {
+  color: orange;
+}
+
+@keyframes spin {
+  from{
+      transform: rotate(0deg);
+  }to{
+      transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 992px) {
+
+  .img-thumbnail-details {
+    max-height: 200px;
+    max-width: 20%;
+    margin-bottom: 30px;
+  }
+
+  .modal {
+    margin: 5% auto;
+    bottom: 0;
+  }
+} 
